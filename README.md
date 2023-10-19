@@ -5,6 +5,11 @@
 Ray is a simple library that provides a fluent and elegant syntax to access elements on arrays.
 
 Some of the features of Ray include accessing first element, last element, a specific element and it works on nested arrays too.
+## Installation
+You can install Ray via composer package manager:
+```shell
+composer require celyes/ray
+```
 
 ## Usage:
 
