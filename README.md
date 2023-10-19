@@ -21,7 +21,7 @@ The code below contains a few examples on how to use this simple library.
 $array = Ray::from([
     'first' => ['foo' => 'bar'],
     'second' => ['bar' => 'baz'],
-    1 => [2,3]
+    1 => [2, 3]
 ])
 
 // Access elements however you like
@@ -47,7 +47,7 @@ Here's an example:
 $array = Ray::from([
     'first' => ['foo' => 'bar'],
     'second' => ['bar' => 'baz'],
-    1 => [2,3]
+    1 => [2, 3]
 ])
 
 $array->each(function($key, value) {
@@ -63,10 +63,27 @@ Here's an example:
 $array = Ray::from([
     'first' => ['foo' => 'bar'],
     'second' => ['bar' => 'baz'],
-    1 => [2,3]
+    1 => [2, 3]
 ])
 
 foreach($array->all() as $key => value) {
     // do some stuff with the key and value
 }
+```
+
+## accessing keys and values
+
+You can access keys and values of an array using the `keys()` and `values()` methods:
+
+```php
+$array = Ray::from([
+    'first' => ['foo' => 'bar'],
+    'second' => ['bar' => 'baz'],
+    1 => [2, 3]
+])
+
+$array->first()->keys(); // ['foo'];
+$array->nth(2)->values(); // ['baz'];
+$array->last()->keys(); // [0, 1];
+$array->last()->values(); // [2, 3];
 ```
