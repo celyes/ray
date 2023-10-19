@@ -1,0 +1,25 @@
+{
+    "name": "celyes/ray",
+    "description": "Array manipulation in PHP",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Celyes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "celyes",
+            "email": "celyes02@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "pestphp/pest": "^2.24"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
