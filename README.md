@@ -32,7 +32,7 @@ echo $array->last->nth(1)->value(); // 3
 ## Iterating through values
 
 You can iterate through the values of a Ray object by using the `each()` method. 
-This method accepts a callable to be executed on the every element of the array. Not that this method changes the array in place.
+This method accepts a callable to be executed on the every element of the array. Note that this method changes the array in place.
 
 Here's an example:
 
