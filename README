@@ -5,6 +5,9 @@ Ray is a simple library that provides a fluent and elegant syntax to access elem
 Some of the features of Ray include accessing first element, last element, a specific element and it works on nested arrays too.
 
 ### Usage:
+
+The code below contains a few examples on how to use this simple library.
+
 ```php
 
 // create a Ray object from any array...
