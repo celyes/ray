@@ -51,5 +51,4 @@ class Element implements Stringable
     {
         return $this->value;
     }
-
 }

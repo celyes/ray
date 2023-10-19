@@ -92,4 +92,31 @@ class Ray implements Countable
         }
         throw new NonListArrayException("The provided array is not a list. Use the get() function or make sure the index is correct.");
     }
+
+    /**
+     * Get the keys of the input array
+     * @return array
+     */
+    public function keys(): array
+    {
+        return array_keys($this->input);
+    }
+
+    /**
+     * Get the values of the input array
+     * @return array
+     */
+    public function values(): array
+    {
+        return array_values($this->input);
+    }
+
+
+    public function each(callable $callback)
+    {
+        foreach($this->input as $index => $key) {
+            $this->input[$index] = $callback($index, $key);
+        }
+        return $this;
+    }
 }
