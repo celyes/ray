@@ -1,5 +1,7 @@
 # Ray
 
+### :palestinian_territories: Children in Palestine need your help! Donate [here](https://donate.unrwa.org/gaza/~my-donation?_cv=1) :palestinian_territories:
+
 Ray is a simple library that provides a fluent and elegant syntax to access elements on arrays.
 
 Some of the features of Ray include accessing first element, last element, a specific element and it works on nested arrays too.
