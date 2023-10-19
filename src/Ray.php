@@ -2,10 +2,9 @@
 
 namespace Celyes;
 
-use Celyes\Exceptions\NonListArrayException;
 use Countable;
+use Celyes\Exceptions\NonListArrayException;
 use Celyes\Exceptions\UndefinedElementException;
-use PHPUnit\Logging\Exception;
 
 class Ray implements Countable
 {
