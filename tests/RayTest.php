@@ -1,9 +1,9 @@
 <?php
 
+use Celyes\Ray;
 use Celyes\Element;
 use Celyes\Exceptions\NonListArrayException;
 use Celyes\Exceptions\UndefinedElementException;
-use Celyes\Ray;
 
 it('should get first element of a normal array', function () {
     $array = Ray::from([1, 2, 3]);
@@ -109,3 +109,32 @@ it('should throw a NonListArrayException when using nth on non associative array
     NonListArrayException::class,
     'The provided array is not a list. Use the get() function or make sure the index is correct.'
 );
+
+it('should get keys of array correctly', function () {
+    $original_array = [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12]
+    ];
+    $array = Ray::from($original_array);
+
+    expect($array->keys())->toBe(array_keys($original_array));
+});
+
+it('should get values of array correctly', function () {
+    $original_array = [
+        'one' => 'two',
+        'three' => 'four',
+    ];
+    $array = Ray::from($original_array);
+
+    expect($array->values())->toBe(array_values($original_array));
+});
+
+it('should execute function on each element using the `each()` method', function() {
+    $array = Ray::from([1,2,3,4,5]);
+    $array->each(function($index, $element) {
+        return $element * 2;
+    });
+    expect($array->all())->toBe([2,4,6,8,10]);
+});
